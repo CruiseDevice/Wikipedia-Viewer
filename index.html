@@ -3,12 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Wikipedia Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    Click here for random article
-    <form class="" action="" method="" id = "input-form">
-      <input type="text" name="" value="" id = "search-input">
-    </form>
+      <center>
+          Click here for random article <br>
+          <form class="form-container" action="" method="" id = "form-container">
+            <input type="text" name="Wikipedia" value="" id = "search-input"><br>
+            <button type="button" name="button" id = "submit-btn">Click here to search</button>
+          </form>
+
+        <div class="wikipedia-container">
+          <h3 id = 'wikipedia-header'>Relevant Wikipedia Links</h3>
+          <ul id = "wikipedia-links">
+          </ul>
+        </div>
+
+      </center>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script src = "js/app.js">
+    </script>
+
   </body>
 </html>
