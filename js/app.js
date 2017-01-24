@@ -33,5 +33,8 @@ function loadData(){
       console.log("complete");
     });
     return false;
+
+
+    // TODO: Search random wikipedia article
 }
 $('#form-container').submit(loadData);
