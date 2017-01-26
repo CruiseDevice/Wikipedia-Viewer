@@ -8,8 +8,8 @@ function loadData(){
   var search_input = $("#search-input").val();
 
   console.log(search_input);
-
   var wikipedia_url = "http://en.wikipedia.org/w/api.php";
+  // getArticle()
   $.ajax({
       url: wikipedia_url,
       type: 'GET',
@@ -33,8 +33,19 @@ function loadData(){
       console.log("complete");
     });
     return false;
-
-
-    // TODO: Search random wikipedia article
 }
 $('#form-container').submit(loadData);
+$(document).ready(function() {
+  $('#random-btn').click(function(event) {
+    /* Act on the event */
+    event.preventDefault();
+    // console.log('clicked');
+    var random_url = window.open("https://en.wikipedia.org/wiki/Special:Random");
+    console.log(random_url);
+    if(random_url){
+      random_url.focus();
+    }else{
+      alert('Please allow popups for this website');
+    }
+  });
+});
