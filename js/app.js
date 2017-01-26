@@ -17,13 +17,13 @@ function loadData(){
       data: {action: 'query', list: 'search', srsearch: $("input[name=Wikipedia]").val(), format: 'json' }
     })
     .done(function(response) {
-      //console.log(response);
+      console.log(response);
       var art = response.query.search;
       console.log(art);
       art.forEach(function(val){
         //console.log(val.snippet);
-        $wikiElem.append('<li class = "article">'+
-      val.title+'<p>'+val.snippet+'</p>');
+        $wikiElem.append('<div class = panel-group><div class = "panel panel-default">'+'<li class = "article">'+
+      '<div class = "panel-heading">'+val.title+'<p></div>'+'<div class = "panel-body">'+val.snippet+'</p></div></div></div>');
       });
     })
     .fail(function() {

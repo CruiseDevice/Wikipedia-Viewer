@@ -4,22 +4,30 @@
     <meta charset="utf-8">
     <title>Wikipedia Viewer</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <!-- TODO: Visual Polish -->
+    <div class = "container">
       <center>
           Click here for random article <br>
           <form class="form-container" action="" method="" id = "form-container">
             <input type="text" name="Wikipedia" value="" id = "search-input"><br>
             Click here to search <br>
-            <button type="button" name="button" id = "random-btn">Click here for Random Article</button>
+            <button type="button" name="button" id = "random-btn" class = "btn btn-default">Click here for Random Article</button>
           </form>
       </center>
 
         <div class="wikipedia-container">
         <h3 id = 'wikipedia-header'>Relevant Wikipedia Links</h3>
-          <ul id = "wikipedia-links">
-          </ul>
+            <ul id = "wikipedia-links">
+            </ul>
         </div>
 
     </div>
