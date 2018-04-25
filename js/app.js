@@ -7,7 +7,7 @@ function loadData(){
 
   var search_input = $("#search-input").val();
 
-  console.log(search_input);
+  // console.log(search_input);
   var wikipedia_url = "http://en.wikipedia.org/w/api.php";
   // getArticle()
   $.ajax({
@@ -17,13 +17,14 @@ function loadData(){
       data: {action: 'query', list: 'search', srsearch: $("input[name=Wikipedia]").val(), format: 'json' }
     })
     .done(function(response) {
-      console.log(response);
+      // console.log(response);
       var art = response.query.search;
-      console.log(art);
+      // console.log(art);
       art.forEach(function(val){
         //console.log(val.snippet);
+        console.log(val)
         $wikiElem.append('<div class = panel-group><div class = "panel panel-default">'+'<li class = "article">'+
-      '<div class = "panel-heading">'+val.title+'<p></div>'+'<div class = "panel-body">'+val.snippet+'</p></div></div></div>');
+      '<div class = "panel-heading"><a href = "https://en.wikipedia.org/wiki/'+val.title+'">'+val.title+'</a><p></div>'+'<div class = "panel-body">'+val.snippet+'</p></div></div></div>');
       });
     })
     .fail(function() {
