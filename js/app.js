@@ -24,7 +24,7 @@ function loadData(){
         //console.log(val.snippet);
         console.log(val)
         $wikiElem.append('<div class = panel-group><div class = "panel panel-default">'+'<li class = "article">'+
-      '<div class = "panel-heading"><a href = "https://en.wikipedia.org/wiki/'+val.title+'">'+val.title+'</a><p></div>'+'<div class = "panel-body">'+val.snippet+'</p></div></div></div>');
+      '<div class = "panel-heading"><a href = "https://en.wikipedia.org/wiki/'+val.title+'"target="_blank">'+val.title+'</a><p></div>'+'<div class = "panel-body">'+val.snippet+'</p></div></div></div>');
       });
     })
     .fail(function() {
